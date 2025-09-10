@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-10T16:57:57.537352" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\tests\login_test.robot">
+<test id="s1-t1" name="Verify Login Functionality" line="5">
+<kw name="Open Browser To Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T16:57:58.143314" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T16:57:58.142646" elapsed="2.044693"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T16:58:00.187904" elapsed="0.086498"/>
+</kw>
+<status status="PASS" start="2025-09-10T16:57:58.140961" elapsed="2.133824"/>
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T16:58:00.282592" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T16:58:00.280678" elapsed="0.282335"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T16:58:00.564252" level="INFO">Typing text 'thomas' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T16:58:00.563594" elapsed="0.141940"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T16:58:00.706168" level="INFO">Clicking button 'id:login'.</msg>
+<msg time="2025-09-10T16:58:00.949857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-10T16:58:00.950054" level="FAIL">Button with locator 'id:login' not found.</msg>
+<arg>id:login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-10T16:58:00.705872" elapsed="0.247702">Button with locator 'id:login' not found.</status>
+</kw>
+<status status="FAIL" start="2025-09-10T16:58:00.275943" elapsed="0.677864">Button with locator 'id:login' not found.</status>
+</kw>
+<kw name="Verify Login Successful" owner="keywords">
+<status status="NOT RUN" start="2025-09-10T16:58:00.954279" elapsed="0.000065"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<status status="NOT RUN" start="2025-09-10T16:58:00.954720" elapsed="0.000055"/>
+</kw>
+<status status="FAIL" start="2025-09-10T16:57:58.139300" elapsed="2.815880">Button with locator 'id:login' not found.</status>
+</test>
+<status status="FAIL" start="2025-09-10T16:57:57.540399" elapsed="3.416253"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
