@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-10T17:24:40.315577" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\tests">
+<suite id="s1-s1" name="Cart Tests" source="C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\tests\cart_tests.robot">
+<test id="s1-s1-t1" name="Add Product To Cart" line="7">
+<kw name="Open Sauce Demo" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:40.966843" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T17:24:40.966565" elapsed="2.217517"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T17:24:43.184622" elapsed="0.071768"/>
+</kw>
+<doc>Launch browser and open Sauce Demo site</doc>
+<status status="PASS" start="2025-09-10T17:24:40.965760" elapsed="2.291740"/>
+</kw>
+<kw name="Login With Credentials" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:43.260545" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:43.259715" elapsed="0.311170"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:43.571965" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:43.571317" elapsed="0.130744"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:43.702641" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:43.702331" elapsed="0.182701"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-09-10T17:24:43.258467" elapsed="0.626717"/>
+</kw>
+<kw name="Add Product To Cart" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:43.886822" level="INFO">Clicking button 'xpath=//div[text()="Sauce Labs Backpack"]/ancestor::div[@class="inventory_item"]//button'.</msg>
+<arg>xpath=//div[text()="${product_name}"]/ancestor::div[@class="inventory_item"]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:43.886301" elapsed="0.151843"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:44.038667" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:44.038385" elapsed="0.112670"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:44.172330" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<arg>${product_name}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-10T17:24:44.151264" elapsed="0.021184"/>
+</kw>
+<arg>Sauce Labs Backpack</arg>
+<status status="PASS" start="2025-09-10T17:24:43.885710" elapsed="0.286871"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-10T17:24:44.173024" elapsed="2.269625"/>
+</kw>
+<status status="PASS" start="2025-09-10T17:24:40.964808" elapsed="5.479237"/>
+</test>
+<test id="s1-s1-t2" name="Add Multiple Products And Checkout" line="13">
+<kw name="Open Sauce Demo" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:46.451578" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T17:24:46.450620" elapsed="1.921200"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T17:24:48.372138" elapsed="0.061590"/>
+</kw>
+<doc>Launch browser and open Sauce Demo site</doc>
+<status status="PASS" start="2025-09-10T17:24:46.449399" elapsed="1.984774"/>
+</kw>
+<kw name="Login With Credentials" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:48.437282" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:48.436553" elapsed="0.361652"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:48.799364" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:48.798692" elapsed="0.131378"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:48.930586" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:48.930305" elapsed="0.178127"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-09-10T17:24:48.435330" elapsed="0.673326"/>
+</kw>
+<kw name="Add Multiple Products And Checkout" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:49.111797" level="INFO">Clicking button 'xpath=//div[text()="Sauce Labs Backpack"]/ancestor::div[@class="inventory_item"]//button'.</msg>
+<arg>xpath=//div[text()="${item}"]/ancestor::div[@class="inventory_item"]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:49.111289" elapsed="0.173981"/>
+</kw>
+<var name="${item}">Sauce Labs Backpack</var>
+<status status="PASS" start="2025-09-10T17:24:49.110996" elapsed="0.174388"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:49.286150" level="INFO">Clicking button 'xpath=//div[text()="Sauce Labs Bike Light"]/ancestor::div[@class="inventory_item"]//button'.</msg>
+<arg>xpath=//div[text()="${item}"]/ancestor::div[@class="inventory_item"]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:49.285810" elapsed="0.108094"/>
+</kw>
+<var name="${item}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2025-09-10T17:24:49.285625" elapsed="0.108426"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:49.394837" level="INFO">Clicking button 'xpath=//div[text()="Sauce Labs Bolt T-Shirt"]/ancestor::div[@class="inventory_item"]//button'.</msg>
+<arg>xpath=//div[text()="${item}"]/ancestor::div[@class="inventory_item"]//button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:49.394516" elapsed="0.245209"/>
+</kw>
+<var name="${item}">Sauce Labs Bolt T-Shirt</var>
+<status status="PASS" start="2025-09-10T17:24:49.394333" elapsed="0.245603"/>
+</iter>
+<var>${item}</var>
+<value>@{products}</value>
+<status status="PASS" start="2025-09-10T17:24:49.110497" elapsed="0.529576"/>
+</for>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:49.640847" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:49.640429" elapsed="0.186938"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:49.829681" level="INFO">Clicking button 'id=checkout'.</msg>
+<arg>id=checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:49.828533" elapsed="0.213314"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:50.074071" level="INFO">Current page contains text 'Checkout: Your Information'.</msg>
+<arg>Checkout: Your Information</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-10T17:24:50.042260" elapsed="0.031964"/>
+</kw>
+<arg>Sauce Labs Backpack</arg>
+<arg>Sauce Labs Bike Light</arg>
+<arg>Sauce Labs Bolt T-Shirt</arg>
+<status status="PASS" start="2025-09-10T17:24:49.109837" elapsed="0.964556"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-10T17:24:50.075005" elapsed="2.298637"/>
+</kw>
+<status status="PASS" start="2025-09-10T17:24:46.447215" elapsed="5.927685"/>
+</test>
+<status status="PASS" start="2025-09-10T17:24:40.369937" elapsed="12.009262"/>
+</suite>
+<suite id="s1-s2" name="Login Tests" source="C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\tests\login_tests.robot">
+<test id="s1-s2-t1" name="Login With Valid Credentials" line="7">
+<kw name="Open Sauce Demo" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:52.413344" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T17:24:52.412035" elapsed="1.905783"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T17:24:54.318177" elapsed="0.056409"/>
+</kw>
+<doc>Launch browser and open Sauce Demo site</doc>
+<status status="PASS" start="2025-09-10T17:24:52.410073" elapsed="1.965091"/>
+</kw>
+<kw name="Login With Credentials" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:54.379624" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:54.378951" elapsed="0.371683"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:54.751711" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:54.751094" elapsed="0.132630"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:54.884271" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-10T17:24:54.883959" elapsed="0.166710"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2025-09-10T17:24:54.377789" elapsed="0.673030"/>
+</kw>
+<kw name="Verify User On Products Page" owner="keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:55.105329" level="INFO">Current page contains element 'xpath=//span[text()="Products"]'.</msg>
+<arg>xpath=//span[text()="Products"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-10T17:24:55.051789" elapsed="0.053664"/>
+</kw>
+<status status="PASS" start="2025-09-10T17:24:55.051340" elapsed="0.054257"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-10T17:24:55.106079" elapsed="2.294470"/>
+</kw>
+<status status="PASS" start="2025-09-10T17:24:52.406523" elapsed="4.995184"/>
+</test>
+<test id="s1-s2-t2" name="Login With Invalid Credentials" line="13">
+<kw name="Open Sauce Demo" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-10T17:24:57.407976" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-10T17:24:57.407178" elapsed="1.942295"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-10T17:24:59.349784" elapsed="0.061457"/>
+</kw>
+<doc>Launch browser and open Sauce Demo site</doc>
+<status status="PASS" start="2025-09-10T17:24:57.406002" elapsed="2.005748"/>
+</kw>
+<kw name="Login With Credentials" owner="keywords">
+<msg time="2025-09-10T17:24:59.419447" level="FAIL">Variable '${INVALID_USER}' not found. Did you mean:
+    ${VALID_USER}</msg>
+<arg>${INVALID_USER}</arg>
+<arg>${INVALID_PASS}</arg>
+<status status="FAIL" start="2025-09-10T17:24:59.416790" elapsed="0.002793">Variable '${INVALID_USER}' not found. Did you mean:
+    ${VALID_USER}</status>
+</kw>
+<kw name="Verify Error Message" owner="keywords">
+<status status="NOT RUN" start="2025-09-10T17:24:59.420362" elapsed="0.000113"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-09-10T17:24:59.420998" elapsed="0.000095"/>
+</kw>
+<status status="FAIL" start="2025-09-10T17:24:57.404157" elapsed="2.017554">Variable '${INVALID_USER}' not found. Did you mean:
+    ${VALID_USER}</status>
+</test>
+<status status="FAIL" start="2025-09-10T17:24:52.383754" elapsed="7.039842"/>
+</suite>
+<status status="FAIL" start="2025-09-10T17:24:40.318256" elapsed="19.109022"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="1" skip="0">Tests</stat>
+<stat name="Cart Tests" id="s1-s1" pass="2" fail="0" skip="0">Tests.Cart Tests</stat>
+<stat name="Login Tests" id="s1-s2" pass="1" fail="1" skip="0">Tests.Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-09-10T17:24:40.403649" level="ERROR">Error in file 'C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\resources\common_vars.robot' on line 8: Setting variable '${INVALID_USER} fake_user' failed: Invalid variable name '${INVALID_USER} fake_user'.</msg>
+<msg time="2025-09-10T17:24:40.404184" level="ERROR">Error in file 'C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\resources\common_vars.robot' on line 9: Setting variable '${INVALID_PASS} wrong_pass' failed: Invalid variable name '${INVALID_PASS} wrong_pass'.</msg>
+<msg time="2025-09-10T17:24:52.391148" level="ERROR">Error in file 'C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\resources\common_vars.robot' on line 8: Setting variable '${INVALID_USER} fake_user' failed: Invalid variable name '${INVALID_USER} fake_user'.</msg>
+<msg time="2025-09-10T17:24:52.392506" level="ERROR">Error in file 'C:\Users\user.DESKTOP-L5KEL1B\Downloads\ref\python\resources\common_vars.robot' on line 9: Setting variable '${INVALID_PASS} wrong_pass' failed: Invalid variable name '${INVALID_PASS} wrong_pass'.</msg>
+</errors>
+</robot>
