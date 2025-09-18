@@ -20,7 +20,27 @@ The objective of this project is to automate the testing of the GUVI web applica
 - Both positive and negative test scenarios  
 - Comprehensive reporting using Pytest HTML reports  
 
----
+GUVI_Project/
+│
+├─ pages/                  # Page Object Model classes
+│   ├─ base_page.py        # BasePage class with common methods
+│   ├─ home_page.py        # Homepage elements and actions (menu, Login button, Dobby)
+│   ├─ login_page.py       # Login page elements and actions
+│   └─ signup_page.py      # Sign-Up page elements and actions
+│
+├─ tests/                  # Test scripts
+│   ├─ test_login.py       # TC3, TC6, TC7: Login button & login functionality
+│   ├─ test_home.py        # TC1, TC2, TC8, TC9: Homepage validations
+│   └─ test_signup.py      # TC4, TC5: Sign-Up button and navigation
+│
+├─ drivers/                # WebDriver executables
+│   └─ chromedriver.exe
+├─ reports/                # Optional: HTML test reports
+│   └─ report.html
+├─ config.py               # URLs, credentials, settings
+├─ requirements.txt        # Python dependencies
+└─ README.md               # Project documentation
+
 
 ## Test Cases Covered
 1. Verify whether the URL `https://www.guvi.in` is valid  
